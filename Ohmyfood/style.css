@@ -1,0 +1,118 @@
+/************************************
+*             Général               *
+************************************/
+:root {
+  --Violet:#9356DC;
+  --Rose:#FF79DA;
+  --Vert:#99E2D0;
+}
+
+
+
+body{
+    list-style-type: none;
+    font-family: "Roboto", 'Times New Roman', Times, serif, Arial, Helvetica, sans-serif;
+}
+
+h1, .footer_titre {
+    font-family: "Shrikhand", 'Times New Roman', Times, serif, Arial, Helvetica, sans-serif;
+}
+h1 {
+    text-align:center;
+ 
+
+}
+.ville {
+    text-align:center;
+}
+
+@keyframes itemAppear {
+    0% {
+      transform: scale(0);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  @keyframes loader {
+    100% {
+      opacity: 0;
+      z-index: -10;
+    }
+  }
+  @keyframes jump {
+    0% {
+      transform: translateY(0);
+    }
+    25% {
+      transform: translateY(0.5rem);
+    }
+    75% {
+      transform: translateY(-0.5rem);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+  .loader {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background-color: rgba(255, 255, 255, 0.9);
+    animation: loader 0.01s;
+    animation-delay: 1.75s;
+    animation-fill-mode: both;
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .loader__item {
+    height: 1rem;
+    width: 1rem;
+    border-radius: 1rem;
+    animation: jump 1s;
+    animation-iteration-count: 1;
+  }
+  .loader__itemContainer {
+    display: flex;
+    width: 5rem;
+    justify-content: space-between;
+  }
+  .loader__item--1 {
+    background-color: #9356DC;
+  }
+  .loader__item--2 {
+    background-color: #FF79DA;
+    animation-delay: 0.25s;
+  }
+  .loader__item--3 {
+    background-color: #99E2D0;
+    animation-delay: 0.5s;
+  }
+  
+
+
+li {
+  list-style-type: none;
+}
+
+
+.restaurant {
+  /* Add shadows to create the "card" effect */
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+}
+
+/* On mouse-over, add a deeper shadow */
+img:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+/* Add some padding inside the card container */
+.container {
+  padding: 2px 16px;
+}
